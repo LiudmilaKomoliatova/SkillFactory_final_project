@@ -28,3 +28,18 @@ class TestRegPage():
 	def test_RR005_registration_check(self, browser, data):
 		reg_page = RegPage(browser, URL_PAGE)
 		reg_page.registration_check(data)
+
+	@pytest.mark.parametrize('valid_name', DataPage().invalid_user_names())
+	def test_RR006_negative_user_name_field_validation(self, browser, valid_name):
+		reg_page = RegPage(browser, URL_PAGE)
+		reg_page.user_name_field_validation(valid_name, positive=False)
+
+	@pytest.mark.parametrize('user_data', DataPage().invalid_email_and_phone())
+	def test_RR007_negative_email_and_phone_field_validation(self, browser, user_data):
+		reg_page = RegPage(browser, URL_PAGE)
+		reg_page.email_and_phone_field_validation(user_data, positive=False)
+
+	@pytest.mark.parametrize('passw', DataPage().invalid_passwords())
+	def test_RR008_negative_password_field_validation(self, browser, passw):
+		reg_page = RegPage(browser, URL_PAGE)
+		reg_page.password_field_validation(passw, positive=False)

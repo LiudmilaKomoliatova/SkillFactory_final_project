@@ -72,3 +72,15 @@ class DataPage:
 	def valid_reg_users(self):
 		return [(self.russian_string(), self.email(), self.password())]
 
+	def invalid_user_names(self):
+		return [self.english_string(), self.special_string()]
+
+	def invalid_email_and_phone(self):
+		list = []
+		for _ in range(1):
+			list.append(self.english_string())
+			list.append(self.random_ls())
+		return list
+
+	def invalid_passwords(self):
+		return [self.english_all_string(6), self.russian_string(), self.english_string()]
