@@ -1,0 +1,10 @@
+URL_PAGE = "https://b2c.passport.rt.ru/"
+
+VALID_LOGIN = "xyvujida@mailo.icu"
+VALID_LOGIN_PASSWORD = "Xyvujida@mailo.icu"
+VALID_PHONE = "100500"
+VALID_PHONE_PASSWORD = "Xyvujida@mailo.icu"
+VALID_EMAIL = "xyvujida@mailo.icu"
+VALID_EMAIL_PASSWORD = "Xyvujida@mailo.icu"
+VALID_LS = "kokoko"
+VALID_LS_PASSWORD = "Xyvujida@mailo.icu"
